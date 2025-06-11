@@ -1,0 +1,159 @@
+// --- FILE: style.css ---
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Add some padding around the container */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-input button {
+    padding: 12px 20px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.task-input button:hover {
+    background-color: #218838;
+}
+
+.dashboard {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px; /* Space between dashboard items */
+}
+
+.dashboard p {
+    margin: 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.dashboard span {
+    font-weight: bold;
+    color: #007bff; /* Blue */
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+#taskList li.completed {
+    background-color: #e6ffe6; /* Lighter green for completed */
+    text-decoration: line-through;
+    color: #777;
+}
+
+#taskList li span.task-text {
+    flex-grow: 1;
+    font-size: 17px;
+    color: #333;
+    word-break: break-word; /* Ensure long words break */
+    margin-right: 10px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.task-actions .complete-btn {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.task-actions .complete-btn:hover {
+    background-color: #0056b3;
+}
+
+.task-actions .delete-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.task-actions .delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .task-input {
+        flex-direction: column;
+    }
+    .task-input button {
+        width: 100%;
+    }
+    .dashboard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dashboard p {
+        width: 100%; /* Make each dashboard item take full width */
+    }
+}
